@@ -25,14 +25,15 @@ contract EntityManager is ErrorCodes, Util, EntityType, FarmerType, GovtVerifica
     return Entities[entityId];
   }
 
-  function setVerification(string entityName, GovtVerification govtVerification) returns (address) {
+  function setVerification(string entityName, GovtVerification govtVerification) returns (ErrorCodes) {
     //TODO Allow only for govt
     uint entityId = entityToIdMap[b32(entityName)];
     if (!exists(entityName)) return ErrorCodes.NOT_FOUND;
     Entities[entityId].setVerification(govtVerification);
+    return ErrorCodes.SUCCESS;
   }
 
-  function getVerification(string entityName) returns (address) {
+  function getVerification(string entityName) returns (GovtVerification) {
     uint entityId = entityToIdMap[b32(entityName)];
     return Entities[entityId].getVerification();
   }
@@ -45,7 +46,8 @@ contract EntityManager is ErrorCodes, Util, EntityType, FarmerType, GovtVerifica
     // add user
     uint entityId = Entities.length;
     entityToIdMap[b32(entityName)] = entityId;
-    Entities.push(new Entity(account, entityName, pwHash, entityId, entityType, farmerType, pubKey, GovtVericiation.UnVerified));
+    GovtVerification verification = GovtVerification.UnVerified;
+    Entities.push(new Entity(account, entityName, pwHash, entityId, entityType, farmerType, pubKey, verification));
     return ErrorCodes.SUCCESS;
   }
 
