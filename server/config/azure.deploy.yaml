@@ -1,0 +1,53 @@
+url: 'http://blockxorhs.eastus.cloudapp.azure.com/bloc/v2.2'
+admin:
+  name: Admin_4259_87888
+  password: '7890'
+  address: d5d708471c8f6c23a5fa8012fb3cb3e6911d7359
+  fill:
+    txResult:
+      status: Success
+      hash: 57de664605a09fcd75e156aa043b1738b2c297b7efaea5ad2e52a2928bd55c71
+      txResult:
+        deletedStorage: ''
+        contractsDeleted: ''
+        gasUsed: fffffffffffffffffffffffffffffffffffffedde59f35c4c0bc13af8e1f976f
+        stateDiff: ''
+        time: 0.000299
+        response: ''
+        blockHash: 91096fef9f4f387062ea84d00939f5d55ce54dae68cd31dc4ff28539523da2b1
+        transactionHash: 57de664605a09fcd75e156aa043b1738b2c297b7efaea5ad2e52a2928bd55c71
+        etherUsed: fffffffffffffffffffffffffffffffffe4556800f6b5896fb89c03cf471bf60
+        newStorage: ''
+        message: Success!
+        trace: ''
+        contractsCreated: d5d708471c8f6c23a5fa8012fb3cb3e6911d7359
+      data:
+        tag: Send
+        contents:
+          hash: 57de664605a09fcd75e156aa043b1738b2c297b7efaea5ad2e52a2928bd55c71
+          gasLimit: '100000'
+          codeOrData: ''
+          gasPrice: '50000000000'
+          to: d5d708471c8f6c23a5fa8012fb3cb3e6911d7359
+          value: '1000000000000000000000'
+          from: e1fd0d4a52b75a694de8b55528ad48e2e2cf7859
+          r: 951aa64aa9233a49ec88691d51850329413ad822208609bd22dcad12638f5d52
+          s: 566fc69b35ab3c2b5ab8894cd5956fdbeb3ee53cc6385ffe2b95ca5dc5684e32
+          v: 1b
+          nonce: '10'
+contract:
+  name: AdminInterface
+  address: e3d95e6a42af765a1c2d3e76b296e427e4fab626
+users:
+  - username: Supplier1
+    password: '1234'
+    role: SUPPLIER
+  - username: Supplier2
+    password: '1234'
+    role: SUPPLIER
+  - username: Buyer1
+    password: '1234'
+    role: BUYER
+  - username: Buyer2
+    password: '1234'
+    role: BUYER
